@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 auth_blueprint = Blueprint('auth', __name__,
                            template_folder="templates")
@@ -6,4 +6,4 @@ auth_blueprint = Blueprint('auth', __name__,
 
 @auth_blueprint.route('/auth')
 def auth():
-    return 'Autenticar'
+    return render_template('auth/auth.html')
